@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 public class Deberes_2 {
@@ -14,13 +15,17 @@ public class Deberes_2 {
 
         4. Разработайте программу, которая выбросит Exception, когда пользователь вводит пустую строку. Пользователю должно показаться сообщение, что пустые строки вводить нельзя.
     */
+        //для первого задания
+        NewMessage("Введите дробное число: ");
 
-        NewMessage("Введите дробное число: ");  //для первого задания
-
+        //для проверки второго задания - делим элемент массива на 0
         System.out.println();
         System.out.println("Проверка второго задания: ");
-        double number = newNum(0);     //для проверки второго задания - делим элемент массива на 0
+        double number = newNum(0);
         System.out.println(number);
+
+        //для проверки четвертого задания (считается, что при использовании "пробела" строка не пустая!)
+        EmptyMessage("Напишите что-нибудь сюда или введите пустую строку если хотите Exception: ");
 
     }
 
@@ -52,6 +57,18 @@ public class Deberes_2 {
     }
     // Задача номер 3:
 
-
-
+    public static void EmptyMessage(String message) {
+        System.out.println(message);
+        Scanner in = new Scanner(System.in);
+        String string = in.nextLine();
+        if (string.isEmpty()) {
+            try {
+                throw new IOException("Пустые строки вводить нельзя!");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            System.out.println(string);
+        }
+    }
 }
