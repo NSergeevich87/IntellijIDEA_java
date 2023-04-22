@@ -24,6 +24,8 @@ public class Deberes_2 {
         double number = newNum(0);
         System.out.println(number);
 
+        //третье задание здесь -> Deberes_2_zadacha_3
+
         //для проверки четвертого задания (считается, что при использовании "пробела" строка не пустая!)
         EmptyMessage("Напишите что-нибудь сюда или введите пустую строку если хотите Exception: ");
 
@@ -55,8 +57,8 @@ public class Deberes_2 {
         } else catchedRes1 = intArray[8] / d;
         return catchedRes1;
     }
-    // Задача номер 3:
 
+    // Задача номер 4:
     public static void EmptyMessage(String message) {
         System.out.println(message);
         Scanner in = new Scanner(System.in);
