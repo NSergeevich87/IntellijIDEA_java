@@ -15,10 +15,16 @@ public class Deberes_2 {
         4. Разработайте программу, которая выбросит Exception, когда пользователь вводит пустую строку. Пользователю должно показаться сообщение, что пустые строки вводить нельзя.
     */
 
-        NewMessage("Введите дробное число: ");
+        NewMessage("Введите дробное число: ");  //для первого задания
+
+        System.out.println();
+        System.out.println("Проверка второго задания: ");
+        double number = newNum(0);     //для проверки второго задания - делим элемент массива на 0
+        System.out.println(number);
 
     }
-                   // Метод по задаче номер 1:
+
+    // Метод по задаче номер 1:
     public static void NewMessage(String message) {
         while (true) {
             Scanner in = new Scanner(System.in);
@@ -32,4 +38,20 @@ public class Deberes_2 {
             }
         }
     }
+
+
+    // Задача номер 2:
+    public static double newNum(int num) {
+        double[] intArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};   //объявил массив
+        double catchedRes1 = 0;                               //объявил переменную
+        int d = num;                                          //запросил число на которое будем делить элемент в массиве
+        if (d == 0) {
+            System.out.println("Вы делите элемент массива на 0");  //для деления на 0, можно обойтись конфигурацией if-else
+        } else catchedRes1 = intArray[8] / d;
+        return catchedRes1;
+    }
+    // Задача номер 3:
+
+
+
 }
